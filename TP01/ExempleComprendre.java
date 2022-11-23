@@ -36,12 +36,12 @@ public class ExempleComprendre {
 		// Translater p1
 		System.out.println("> p1.translater(6, -2);");
 		p1.translater(6, -2);
-		afficher("p1", p1);		// Qu'est ce qui est affiché ?
+		afficher("p1", p1);		// Qu'est ce qui est affiché ? p1 = (9.0, 2.0)
 
 		// Changer l'abscisse de p1 et afficher p1
 		System.out.println("> p1.setX(0);");
 		p1.setX(0);
-		afficher("p1", p1);		// Qu'est ce qui est affiché ?
+		afficher("p1", p1);		// Qu'est ce qui est affiché ? p1 = (0.0, 2.0)
 
 		// Changer l'ordonnée de p1 et afficher p1
 		System.out.println("> p1.setY(10);");
@@ -51,37 +51,37 @@ public class ExempleComprendre {
 		// Prendre une nouvelle poignée sur p1
 		System.out.println("> Point p3 = p1;");
 		Point p3 = p1;
-		afficher("p3", p3);		// Qu'est ce qui est affiché ?
-		afficher("p1", p1);		// Qu'est ce qui est affiché ?
+		afficher("p3", p3);		// Qu'est ce qui est affiché ? p3 = (0.0, 10.0)
+		afficher("p1", p1);		// Qu'est ce qui est affiché ? p1 = (0.0, 10.0)
 
 		// Déplacer p3
 		System.out.println("> p3.translater(100, 100);");
 		p3.translater(100, 100);
-		afficher("p3", p3);		// Qu'est ce qui est affiché ?
+		afficher("p3", p3);		// Qu'est ce qui est affiché ? p3 = (100.0, 110.0)
 
 		// Afficher p1
-		afficher("p1", p1);		// Qu'est ce qui est affiché ?
+		afficher("p1", p1);		// Qu'est ce qui est affiché ? p1 = (100.0, 110.0)
 
 										// Dessiner l'état de la mémoire
 		// Affectations entre poignées
 		System.out.println("> p3 = new Point(123, 321);");
 		p3 = new Point(123, 321);
-		afficher("p3", p3);		// Qu'est ce qui est affiché ?
-		afficher("p1", p1);		// Qu'est ce qui est affiché ?
+		afficher("p3", p3);		// Qu'est ce qui est affiché ? p3 = (123.0, 321.0)
+		afficher("p1", p1);		// Qu'est ce qui est affiché ? p1 = (100.0, 110.0)
 
 		System.out.println("> p1 = p2 = p3;");
 		p1 = p2 = p3;
 										// Dessiner l'état de la mémoire
-		afficher("p1", p1);		// Qu'est ce qui est affiché ?
-		afficher("p2", p2);		// Qu'est ce qui est affiché ?
-		afficher("p3", p3);		// Qu'est ce qui est affiché ?
+		afficher("p1", p1);		// Qu'est ce qui est affiché ? p1 = (123.0, 321.0)
+		afficher("p2", p2);		// Qu'est ce qui est affiché ? p2 = (123.0, 321.0)
+		afficher("p3", p3);		// Qu'est ce qui est affiché ? p3 = (123.0, 321.0)
 
 		// p1, p2 et p3 sont-ils des points différents ?
 		System.out.println("> p1.translater(-123, -321);");
 		p1.translater(-123, -321);
-		afficher("p1", p1);		// Qu'est ce qui est affiché ?
-		afficher("p2", p2);		// Qu'est ce qui est affiché ?
-		afficher("p3", p3);		// Qu'est ce qui est affiché ?
+		afficher("p1", p1);		// Qu'est ce qui est affiché ? p1 = (0.0, 0.0)
+		afficher("p2", p2);		// Qu'est ce qui est affiché ?  p2 = (0.0, 0.0)
+		afficher("p3", p3);		// Qu'est ce qui est affiché ? p3 = (0.0, 0.0)
 
 		d  = new Point(5, 5).distance(new Point(8, 1));
 		System.out.println("d = " + d);

@@ -1,5 +1,10 @@
 class MonPoint {
 
+	/**
+	 *
+	 * @param vx
+	 * @param vy
+	 */
 	public MonPoint(double vx, double vy) {
 		this.x = vx;
 		this.y = vy;
@@ -13,10 +18,18 @@ class MonPoint {
 		return this.y;
 	}
 
+	/**
+	 *
+	 * @param vx
+	 */
 	public void setX(double vx) {
 		this.x = vx;
 	}
 
+	/**
+	 *
+	 * @param vy
+	 */
 	public void setY(double vy) {
 		this.y = vy;
 	}
@@ -25,11 +38,21 @@ class MonPoint {
 		System.out.print("(" + this.x + ", " + this.y + ")");
 	}
 
+	/**
+	 *
+	 * @param autre
+	 * @return la distance entre 2 points
+	 */
 	public double distance(MonPoint autre) {
 		return Math.sqrt(Math.pow(autre.x - this.x, 2)
 					+ Math.pow(autre.y - this.y, 2));
 	}
 
+	/**
+	 *
+	 * @param dx
+	 * @param dy
+	 */
 	public void translater(double dx, double dy) {
 		this.x += dx;
 		this.y += dy;
