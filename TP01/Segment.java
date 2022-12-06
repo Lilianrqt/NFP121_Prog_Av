@@ -27,15 +27,18 @@ public class Segment {
 	* @param dy déplacement suivant l'axe des Y
 	*/
 	public void translater(double dx, double dy) {
-		System.err.println("Segment.translater(double, double) non implantée");
+		this.extremite1.setX(this.extremite1.getX()+dx);
+		this.extremite1.setY(this.extremite1.getY()+dy);
+		
+		this.extremite2.setX(this.extremite2.getX()+dx);
+		this.extremite2.setY(this.extremite2.getY()+dy);
 	}
 
 	/** Obtenir la longueur du segment.
 	 * @return la longueur du segment
 	 */
 	public double longueur() {
-		System.err.println("Segment.longueur() non implantée");
-		return 0;
+		return this.extremite1.distance(extremite2);
 	}
 
 	/** Afficher le segment.  Le segment est affiché sous la forme :
@@ -44,7 +47,11 @@ public class Segment {
 	 * </PRE>
 	 */
 	public void afficher() {
-		System.err.println("Segment.afficher() non implantée");
+		System.out.print("[");
+		this.extremite1.afficher();
+		System.out.print("-");
+		this.extremite2.afficher();		
+		System.out.print("]");		
 	}
 
 	/** Obtenir la couleur du segment.
